@@ -13,7 +13,7 @@ package investigation {
     class PoliceInvestigation {
     }
 
-    class PreChargeDecision {
+    class PreChargeDecisionCase {
         void RecordAlternativeOffenceAdvice(Suspect, OffenceAdvice)
         OffenceAdvice GetOffenceAdviceFor(Suspect)
     }
@@ -23,16 +23,21 @@ package investigation {
 }
 
 package preparation {
-}
+    class CriminalCase {
+    }
 
-class CriminalCase {
+    class Defendant {
+    }
+
+    class PoliceCaseFile {
+    }
 }
 
 class PNCId {
 }
 
 class PublicProsecutionService {
-    CriminalCase ReceiveRequestForPreChargeDecision(PoliceInvestigation)
+    PreChargeDecisionCase ReceiveRequestForPreChargeDecisionCase(PoliceInvestigation)
     CriminalCase AcceptCaseFile(PoliceCaseFile)
 }
 
@@ -46,9 +51,9 @@ PoliceInvestigation *-- "1" PNCId
 
 PoliceInvestigation *-- "*" Suspect
 
-PreChargeDecision *-- "*" Suspect
+PreChargeDecisionCase *-- "*" Suspect
 
-PreChargeDecision *-- "*" OffenceAdvice
+PreChargeDecisionCase *-- "*" OffenceAdvice
 
 CriminalCase *-- "1" PNCId
 
