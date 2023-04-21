@@ -17,12 +17,17 @@ class PoliceInvestigation {
 class PreChargeDecision {
 }
 
+class AlternativeOffenceAdvice {
+}
+
 class Suspect    {
 }
 
-Suspect *-- "*" CriminalOffence
+Suspect *-- "1" CriminalOffence
 
 PoliceInvestigation *-- "*" Suspect
 
-PoliceInvestigation *-- "*" PNCId
+PoliceInvestigation *-- "1" PNCId
+
+PreChargeDecision *-- "*" AlternativeOffenceAdvice
 @enduml
