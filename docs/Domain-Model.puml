@@ -27,6 +27,7 @@ class Suspect    {
 }
 
 class PublicProsecutionService {
+    CriminalCase ReceiveRequestForPreChargeDecision(PoliceInvestigation)
 }
 
 Suspect *-- "1" CriminalOffence
