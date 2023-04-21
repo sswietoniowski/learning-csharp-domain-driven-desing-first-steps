@@ -1,7 +1,8 @@
+using HarmelLaw.JusticeApp;
 using JusticeApp;
 using System.Collections.Generic;
 
-namespace HarmelLaw.JusticeApp;
+namespace JusticeApp.Preparation;
 
 public class CriminalCase
 {

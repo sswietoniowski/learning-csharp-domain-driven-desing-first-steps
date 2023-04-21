@@ -1,7 +1,7 @@
 ﻿using HarmelLaw.JusticeApp;
 using System.Collections.Generic;
 
-namespace JusticeApp;
+namespace JusticeApp.Preparation;
 
 public class PoliceCaseFile
 {

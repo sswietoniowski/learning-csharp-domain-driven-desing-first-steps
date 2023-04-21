@@ -1,4 +1,4 @@
-namespace JusticeApp.Tests;
+namespace JusticeApp.Tests.Preparation;
 
 public class ACriminalCase
 {
