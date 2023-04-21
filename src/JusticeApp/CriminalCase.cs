@@ -1,8 +1,5 @@
-using System;
+namespace HarmelLaw.JusticeApp;
 
-namespace HarmelLaw.JusticeApp
+public class CriminalCase
 {
-    public class CriminalCase
-    {
-    }
 }

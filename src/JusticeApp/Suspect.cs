@@ -1,14 +1,11 @@
-using System;
+namespace HarmelLaw.JusticeApp;
 
-namespace HarmelLaw.JusticeApp
+public class Suspect
 {
-    public class Suspect
-    {
-        private readonly CriminalOffence _offence;
+    private readonly CriminalOffence _offence;
 
-        public Suspect(CriminalOffence offence)
-        {
-            _offence = offence;
-        }
+    public Suspect(CriminalOffence offence)
+    {
+        _offence = offence;
     }
 }

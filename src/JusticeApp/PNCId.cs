@@ -1,14 +1,11 @@
-using System;
+namespace HarmelLaw.JusticeApp;
 
-namespace HarmelLaw.JusticeApp
+public class PNCId
 {
-    public class PNCId
-    {
-        public string Value { get; private set; }
+    public string Value { get; private set; }
 
-        public PNCId(string value)
-        {
-            Value = value;
-        }
+    public PNCId(string value)
+    {
+        Value = value;
     }
 }

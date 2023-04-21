@@ -1,30 +1,40 @@
-using System;
+using HarmelLaw.JusticeApp;
 using Xunit;
 
-namespace HarmelLaw.JusticeApp.Tests
+namespace JusticeApp.Tests;
+
+public class APreChargeDecisionFixture
 {
-    public class APreChargeDecision
+    public Suspect Suspect { get; }
+    public PreChargeDecision PreChargeDecision { get; }
+    public OffenceAdvice OffenceAdvice { get; }
+
+    public APreChargeDecisionFixture()
     {
-        public APreChargeDecision()
-        {
-            // constructor runs before each test
-            Setup();
-        }
+        Suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
+        PreChargeDecision = new PreChargeDecision();
+        OffenceAdvice = new OffenceAdvice();
+    }
+}
 
-        private void Setup()
-        {
-        }
+public class APreChargeDecision : IClassFixture<APreChargeDecisionFixture>
+{
+    private readonly Suspect _suspect;
+    private readonly PreChargeDecision _aPreChargeDecision;
+    private readonly OffenceAdvice _offenceAdvice;
 
-        [Fact]
-        public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
-        {
-            Suspect suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-            PreChargeDecision aPreChargeDecision = new PreChargeDecision();
-            OffenceAdvice offenceAdvice = new OffenceAdvice();
+    public APreChargeDecision(APreChargeDecisionFixture fixture)
+    {
+        _suspect = fixture.Suspect;
+        _aPreChargeDecision = fixture.PreChargeDecision;
+        _offenceAdvice = fixture.OffenceAdvice;
+    }
 
-            aPreChargeDecision.RecordAlternativeOffenceAdvice(suspect, offenceAdvice);
+    [Fact]
+    public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
+    {
+        _aPreChargeDecision.RecordAlternativeOffenceAdvice(_suspect, _offenceAdvice);
 
-            Assert.Equal(offenceAdvice, aPreChargeDecision.GetAlternativeOffenceAdvice(suspect));
-        }
+        Assert.Equal(_offenceAdvice, _aPreChargeDecision.GetAlternativeOffenceAdvice(_suspect));
     }
 }

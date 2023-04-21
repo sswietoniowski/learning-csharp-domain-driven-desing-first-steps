@@ -1,6 +1,5 @@
-namespace HarmelLaw.JusticeApp
+namespace HarmelLaw.JusticeApp;
+
+public class AlternativeOffenceAdvice
 {
-    public class AlternativeOffenceAdvice
-    {
-    }
 }
