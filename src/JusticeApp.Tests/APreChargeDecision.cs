@@ -5,10 +5,6 @@ namespace HarmelLaw.JusticeApp.Tests
 {
     public class APreChargeDecision
     {
-        private PNCId _pncId;
-        private Suspect _suspect;
-
-
         public APreChargeDecision()
         {
             // constructor runs before each test
