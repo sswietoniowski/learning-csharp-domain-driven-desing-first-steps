@@ -15,5 +15,5 @@ public class PreChargeDecision
         _alternativeOffenceAdvice.Add(suspect, offenceAdvice);
     }
 
-    public OffenceAdvice GetAlternativeOffenceAdvice(Suspect suspect) => _alternativeOffenceAdvice[suspect];
+    public OffenceAdvice GetOffenceAdviceFor(Suspect suspect) => _alternativeOffenceAdvice[suspect];
 }

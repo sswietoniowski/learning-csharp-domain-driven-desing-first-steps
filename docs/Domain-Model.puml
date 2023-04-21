@@ -16,8 +16,8 @@ class PoliceInvestigation {
 }
 
 class PreChargeDecision {
-    void recordAlternativeOffenceAdvice(Suspect, OffenceAdvice)
-    OffenceAdvice getOffenceAdviceFor(Suspect)
+    void RecordAlternativeOffenceAdvice(Suspect, OffenceAdvice)
+    OffenceAdvice GetOffenceAdviceFor(Suspect)
 }
 
 class AlternativeOffenceAdvice {

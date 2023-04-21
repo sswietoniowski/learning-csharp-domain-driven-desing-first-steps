@@ -21,6 +21,6 @@ public class APreChargeDecision : IClassFixture<APreChargeDecisionFixture>
     {
         _aPreChargeDecision.RecordAlternativeOffenceAdvice(_suspect, _offenceAdvice);
 
-        Assert.Equal(_offenceAdvice, _aPreChargeDecision.GetAlternativeOffenceAdvice(_suspect));
+        Assert.Equal(_offenceAdvice, _aPreChargeDecision.GetOffenceAdviceFor(_suspect));
     }
 }
