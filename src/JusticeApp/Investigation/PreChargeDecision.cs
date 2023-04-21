@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace HarmelLaw.JusticeApp;
+namespace JusticeApp.Investigation;
 
 public class PreChargeDecision
 {

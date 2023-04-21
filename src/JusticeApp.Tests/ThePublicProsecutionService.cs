@@ -1,4 +1,5 @@
 ﻿using HarmelLaw.JusticeApp;
+using JusticeApp.Investigation;
 using Xunit;
 
 namespace JusticeApp.Tests;

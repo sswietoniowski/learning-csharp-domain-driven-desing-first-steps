@@ -1,4 +1,6 @@
-namespace HarmelLaw.JusticeApp;
+using HarmelLaw.JusticeApp;
+
+namespace JusticeApp.Investigation;
 
 public class Suspect
 {

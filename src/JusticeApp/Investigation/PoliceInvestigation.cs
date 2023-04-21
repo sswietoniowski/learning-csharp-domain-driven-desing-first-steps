@@ -1,7 +1,8 @@
 using System;
 using System.Collections.Generic;
+using HarmelLaw.JusticeApp;
 
-namespace HarmelLaw.JusticeApp;
+namespace JusticeApp.Investigation;
 
 public class PoliceInvestigation
 {
@@ -14,7 +15,7 @@ public class PoliceInvestigation
         if (suspect == null) throw new ArgumentNullException("You must provide a suspect");
 
         Suspects = new HashSet<Suspect>();
-            
+
         PNCId = pncId;
         Suspects.Add(suspect);
     }
