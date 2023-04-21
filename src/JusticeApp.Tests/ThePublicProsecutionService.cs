@@ -25,4 +25,17 @@ public class ThePublicProsecutionService : IClassFixture<ThePublicProsecutionSer
         Assert.Equal(pncId, criminalCase.PNCId);
         Assert.Equal(policeInvestigation.Suspects, criminalCase.Suspects);
     }
+
+    [Fact]
+    public void ShouldCreateACriminalCaseWhenAPoliceCaseFileIsAccepted()
+    {
+        PNCId pncId = new("1234-ESDT");
+        Defendant defendant = new Defendant();
+        PoliceCaseFile policeCaseFile = new PoliceCaseFile(pncId, defendant);
+
+        CriminalCase criminalCase = _thePps.AcceptCaseFile(policeCaseFile);
+
+        Assert.Equal(pncId, criminalCase.PNCId);
+        Assert.Equal(policeCaseFile.Defendants, criminalCase.Defendants);
+    }
 }
