@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using HarmelLaw.JusticeApp;
 using JusticeApp.Investigation;
 
 namespace JusticeApp.Tests.Investigation;
@@ -10,8 +12,10 @@ public class APreChargeDecisionFixture
 
     public APreChargeDecisionFixture()
     {
+        PNCId pncId = new PNCId("ANOTHER_PNC_ID");
         Suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-        PreChargeDecision = new PreChargeDecision();
+        var suspects = new HashSet<Suspect>();
+        PreChargeDecision = new PreChargeDecision(pncId, suspects);
         OffenceAdvice = new OffenceAdvice();
     }
 }
