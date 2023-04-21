@@ -1,13 +1,14 @@
-﻿using JusticeApp.Investigation;
+﻿using System.Collections.Generic;
+using JusticeApp.Investigation;
 using JusticeApp.Preparation;
 
 namespace JusticeApp;
 
 public class PublicProsecutionService
 {
-    public PreChargeDecisionCase ReceiveRequestForPreChargeDecision(PoliceInvestigation policeInvestigation)
+    public PreChargeDecisionCase ReceiveRequestForPreChargeDecision(PoliceInvestigationDetails policeInvestigationDetails)
     {
-        return new PreChargeDecisionCase(policeInvestigation.PNCId, policeInvestigation.Suspects);
+        return new PreChargeDecisionCase(policeInvestigationDetails.PNCId, policeInvestigationDetails.Suspects as ISet<Suspect>);
     }
 
     public CriminalCase AcceptCaseFile(PoliceCaseFile policeCaseFile)

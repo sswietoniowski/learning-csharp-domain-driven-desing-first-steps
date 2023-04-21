@@ -10,7 +10,7 @@ package investigation {
     class OffenceAdvice {
     }
 
-    class PoliceInvestigation {
+    class PoliceInvestigationDetails {
     }
 
     class PreChargeDecisionCase {
@@ -37,7 +37,7 @@ class PNCId {
 }
 
 class PublicProsecutionService {
-    PreChargeDecisionCase ReceiveRequestForPreChargeDecisionCase(PoliceInvestigation)
+    PreChargeDecisionCase ReceiveRequestForPreChargeDecisionCase(PoliceInvestigationDetails)
     CriminalCase AcceptCaseFile(PoliceCaseFile)
 }
 
@@ -47,9 +47,9 @@ PoliceCaseFile *-- "1" PNCId
 
 PoliceCaseFile *-- "*" Defendant
 
-PoliceInvestigation *-- "1" PNCId
+PoliceInvestigationDetails *-- "1" PNCId
 
-PoliceInvestigation *-- "*" Suspect
+PoliceInvestigationDetails *-- "*" Suspect
 
 PreChargeDecisionCase *-- "*" Suspect
 
@@ -63,6 +63,6 @@ CriminalCase *-- "*" Defendant
 
 PublicProsecutionService --> CriminalCase : <<creates>>
 
-PublicProsecutionService --> PoliceInvestigation : <<uses>>
+PublicProsecutionService --> PoliceInvestigationDetails : <<uses>>
 
 @enduml

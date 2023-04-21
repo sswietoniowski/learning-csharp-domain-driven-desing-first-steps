@@ -4,19 +4,20 @@ using HarmelLaw.JusticeApp;
 
 namespace JusticeApp.Investigation;
 
-public class PoliceInvestigation
+public class PoliceInvestigationDetails
 {
-    public PNCId PNCId { get; set; }
-    public HashSet<Suspect> Suspects { get; set; }
+    private readonly HashSet<Suspect> _suspects = new();
+    public PNCId PNCId { get; }
+    public IReadOnlySet<Suspect> Suspects => _suspects;
 
-    public PoliceInvestigation(PNCId pncId, Suspect suspect)
+    public PoliceInvestigationDetails(PNCId pncId, Suspect suspect)
     {
         if (pncId == null) throw new ArgumentNullException("You must provide a PNC Id");
         if (suspect == null) throw new ArgumentNullException("You must provide a suspect");
 
-        Suspects = new HashSet<Suspect>();
+        _suspects = new HashSet<Suspect>();
 
         PNCId = pncId;
-        Suspects.Add(suspect);
+        _suspects.Add(suspect);
     }
 }

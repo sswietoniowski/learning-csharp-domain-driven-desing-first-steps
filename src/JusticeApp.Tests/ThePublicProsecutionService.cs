@@ -19,12 +19,12 @@ public class ThePublicProsecutionService : IClassFixture<ThePublicProsecutionSer
     {
         PNCId pncId = new("1234-ESDT");
         Suspect suspect = new(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
-        PoliceInvestigation policeInvestigation = new(pncId, suspect);
+        PoliceInvestigationDetails policeInvestigationDetails = new(pncId, suspect);
 
-        PreChargeDecisionCase pcd = _thePps.ReceiveRequestForPreChargeDecision(policeInvestigation);
+        PreChargeDecisionCase pcd = _thePps.ReceiveRequestForPreChargeDecision(policeInvestigationDetails);
 
         Assert.Equal(pncId, pcd.PNCId);
-        Assert.Equal(policeInvestigation.Suspects, pcd.Suspects);
+        Assert.Equal(policeInvestigationDetails.Suspects, pcd.Suspects);
     }
 
     [Fact]

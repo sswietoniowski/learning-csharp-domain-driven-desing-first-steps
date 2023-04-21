@@ -5,13 +5,13 @@ using Xunit;
 
 namespace JusticeApp.Tests.Investigation;
 
-public class APoliceInvestigation
+public class APoliceInvestigationDetails
 {
     private PNCId _pncId;
     private Suspect _suspect;
-    private PoliceInvestigation _anInvestigation;
+    private PoliceInvestigationDetails _anInvestigationDetails;
 
-    public APoliceInvestigation()
+    public APoliceInvestigationDetails()
     {
         // constructor runs before each test
         Setup();
@@ -21,19 +21,19 @@ public class APoliceInvestigation
     {
         _pncId = new PNCId("1234-ESDT");
         _suspect = new Suspect(CriminalOffence.FALSE_ACCOUNTING);
-        _anInvestigation = new PoliceInvestigation(_pncId, _suspect);
+        _anInvestigationDetails = new PoliceInvestigationDetails(_pncId, _suspect);
     }
 
     [Fact]
     public void MustHaveAPoliceNationalComputerId()
     {
-        Assert.NotNull(_anInvestigation.PNCId);
+        Assert.NotNull(_anInvestigationDetails.PNCId);
     }
 
     [Fact]
     public void CannotBeCreatedWithAnEmptyPoliceNationalComputerId()
     {
-        Action action = () => new PoliceInvestigation(null, _suspect);
+        Action action = () => new PoliceInvestigationDetails(null, _suspect);
         Exception exception = Assert.Throws<ArgumentNullException>(action);
 
         Assert.Contains("You must provide a PNC Id", exception.Message);
@@ -42,7 +42,7 @@ public class APoliceInvestigation
     [Fact]
     public void CannotBeCreatedWithNoSuspect()
     {
-        Action action = () => new PoliceInvestigation(_pncId, null);
+        Action action = () => new PoliceInvestigationDetails(_pncId, null);
         Exception exception = Assert.Throws<ArgumentNullException>(action);
 
         Assert.Contains("You must provide a suspect", exception.Message);
