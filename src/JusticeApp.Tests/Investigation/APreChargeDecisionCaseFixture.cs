@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using HarmelLaw.JusticeApp;
 using JusticeApp.Investigation;
 
 namespace JusticeApp.Tests.Investigation;

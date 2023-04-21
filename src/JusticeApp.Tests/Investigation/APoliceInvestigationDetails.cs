@@ -1,5 +1,4 @@
 using System;
-using HarmelLaw.JusticeApp;
 using JusticeApp.Investigation;
 using Xunit;
 

@@ -1,4 +1,4 @@
-namespace HarmelLaw.JusticeApp;
+namespace JusticeApp;
 
 public class PNCId
 {
