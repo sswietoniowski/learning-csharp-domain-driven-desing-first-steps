@@ -25,5 +25,4 @@ Suspect *-- "*" CriminalOffence
 PoliceInvestigation *-- "*" Suspect
 
 PoliceInvestigation *-- "*" PNCId
-
 @enduml
