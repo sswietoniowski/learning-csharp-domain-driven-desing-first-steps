@@ -22,7 +22,7 @@ package investigation {
     }
 }
 
-package preparation {    
+package preparation {
 }
 
 class CriminalCase {
@@ -33,13 +33,18 @@ class PNCId {
 
 class PublicProsecutionService {
     CriminalCase ReceiveRequestForPreChargeDecision(PoliceInvestigation)
+    CriminalCase AcceptCaseFile(PoliceCaseFile)
 }
 
 Suspect *-- "1" CriminalOffence
 
-PoliceInvestigation *-- "*" Suspect
+PoliceCaseFile *-- "1" PNCId
+
+PoliceCaseFile *-- "*" Defendant
 
 PoliceInvestigation *-- "1" PNCId
+
+PoliceInvestigation *-- "*" Suspect
 
 PreChargeDecision *-- "*" Suspect
 
@@ -48,6 +53,8 @@ PreChargeDecision *-- "*" OffenceAdvice
 CriminalCase *-- "1" PNCId
 
 CriminalCase *-- "*" Suspect
+
+CriminalCase *-- "*" Defendant
 
 PublicProsecutionService --> CriminalCase : <<creates>>
 
