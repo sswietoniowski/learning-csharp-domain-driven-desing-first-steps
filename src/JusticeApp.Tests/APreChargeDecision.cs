@@ -17,17 +17,18 @@ namespace HarmelLaw.JusticeApp.Tests
 
         private void Setup()
         {
-            _pncId = new PNCId("1234-ESDT");
-            _suspect = new Suspect(CriminalOffence.FALSE_ACCOUNTING);
         }
 
         [Fact]
         public void ShouldRecordAlternativeOffenceAdviceAgainstSuspects()
         {
-            Action action = () => new PreChargeDecision(_pncId, _suspect, null);
-            Exception exception = Assert.Throws<ArgumentNullException>(action);
+            Suspect suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
+            PreChargeDecision aPreChargeDecision = new PreChargeDecision();
+            OffenceAdvice offenceAdvice = new OffenceAdvice();
 
-            Assert.Contains("You must provide an alternative offence advice", exception.Message);
+            aPreChargeDecision.RecordAlternativeOffenceAdvice(suspect, offenceAdvice);
+
+            Assert.Equal(offenceAdvice, aPreChargeDecision.GetAlternativeOffenceAdvice(suspect));
         }
     }
 }

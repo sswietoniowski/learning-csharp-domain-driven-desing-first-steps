@@ -7,5 +7,14 @@ namespace HarmelLaw.JusticeApp
         public PreChargeDecision()
         {
         }
+
+        public void RecordAlternativeOffenceAdvice(Suspect suspect, OffenceAdvice offenceAdvice)
+        {
+        }
+
+        public OffenceAdvice GetAlternativeOffenceAdvice(Suspect suspect)
+        {
+            return null;
+        }
     }
 }
