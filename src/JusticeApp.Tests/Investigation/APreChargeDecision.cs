@@ -1,7 +1,7 @@
 using JusticeApp.Investigation;
 using Xunit;
 
-namespace JusticeApp.Tests;
+namespace JusticeApp.Tests.Investigation;
 
 public class APreChargeDecision : IClassFixture<APreChargeDecisionFixture>
 {

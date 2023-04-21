@@ -1,6 +1,6 @@
 using JusticeApp.Investigation;
 
-namespace JusticeApp.Tests;
+namespace JusticeApp.Tests.Investigation;
 
 public class APreChargeDecisionFixture
 {

@@ -3,7 +3,7 @@ using HarmelLaw.JusticeApp;
 using JusticeApp.Investigation;
 using Xunit;
 
-namespace JusticeApp.Tests;
+namespace JusticeApp.Tests.Investigation;
 
 public class APoliceInvestigation
 {
@@ -44,7 +44,7 @@ public class APoliceInvestigation
     {
         Action action = () => new PoliceInvestigation(_pncId, null);
         Exception exception = Assert.Throws<ArgumentNullException>(action);
-            
+
         Assert.Contains("You must provide a suspect", exception.Message);
     }
 }
