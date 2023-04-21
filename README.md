@@ -1,22 +1,26 @@
 # First Steps in Domain-Driven Design - C# Solution
+
 ![Build](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions-dotnet/workflows/Build/badge.svg)
 
-This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course for O'Reilly.  If you are more of a Java person, take a look at the [Java version of this codebase](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions/blob/main/README.md).
+This is the starter project for the exercises in the "First Steps in Domain-Driven Design" course for O'Reilly. If you are more of a Java person, take a look at the [Java version of this codebase](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions/blob/main/README.md).
 
 You should be able to fork and then clone this repo to get an almost-empty .NET project ready to work with.
 
 ## Pre-requisites
-* .NET Core SDK (at least .net standard 2.1)
-* IDE of your choice
-* Git client (unless you already have one in your IDE)
+
+- .NET Core SDK (at least .net standard 2.1)
+- IDE of your choice
+- Git client (unless you already have one in your IDE)
 
 ## What you get
+
 A directory `first-steps-in-ddd` containing this README.md, a solution file with the code and test projects.
 XUnit dependencies for testing, standard `src` with `JusticeApp` and `JusticeApp.Tests` directory structure, and some example unit tests
 (`APoliceInvestigation.cs`, `APreChargeDecision.cs` and `ACriminalCase.cs`) and associated starter
 classes (e.g. `PoliceInvestigation.cs`, `PNCId.cs`, `Suspect.cs`) and an Enum, `CriminalOffence.cs`.
 
 ## Up and running
+
 The training relies entirely on your writing unit tests (ideally you use test-driven development)
 so you want to be able to run them very quickly.
 
@@ -31,6 +35,11 @@ You ought to see your code and tests compile, and all but one of the tests run s
 The failing test is where we will start exercise one.
 
 ## Get ahead of the game
-We're going to work on this code based on a [Domain Expert Statement from a Public Prosecutor](https://docs.google.com/document/d/1HpRJj1lk_M80Xvwzs5F-lZ1oACkVNeWRMG0s7BQxZzk/edit?usp=sharing).  If you want to read it in advance, that'll help you in the first workshop exercise and beyond.
+
+We're going to work on this code based on a [Domain Expert Statement from a Public Prosecutor](https://docs.google.com/document/d/1HpRJj1lk_M80Xvwzs5F-lZ1oACkVNeWRMG0s7BQxZzk/edit?usp=sharing). If you want to read it in advance, that'll help you in the first workshop exercise and beyond.
 
 ## Created model
+
+![The Public Prosecutor Service](http://www.plantuml.com/plantuml/svg/9Sun4i8m34JHdbF00HprL2beEOInHQB1aJnQcLoVPAX-yRRO6P4znjOkDz7IHkNXxRf6TDo9FE_J8h6Erm1xCGtMc8fj1Ep2OIgsuoFKEBkABgbWpTvJjIsBfkhovIECqzxYY8JW3ZgPgXNGupzzMkKszVF9p5gF_W00)
+
+This model was created by using [PlantUML](https://plantuml.com/) and methods described [here](https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f) and [here](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github/32771815#32771815). If you're using Visual Studio Code it would be useful to install [this](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) extension :-).
