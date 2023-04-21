@@ -40,7 +40,7 @@ PreChargeDecision *-- "*" Suspect
 
 PreChargeDecision *-- "*" OffenceAdvice
 
-CriminalCase *-- PNCId
+CriminalCase *-- "1" PNCId
 
 CriminalCase *-- "*" Suspect
 
