@@ -40,6 +40,6 @@ We're going to work on this code based on a [Domain Expert Statement from a Publ
 
 ## Created model
 
-![The Public Prosecutor Service](http://www.plantuml.com/plantuml/svg/9Sun4i8m34JHdbF00HprL2beEOInHQB1aJnQcLoVPAX-yRRO6P4znjOkDz7IHkNXxRf6TDo9FE_J8h6Erm1xCGtMc8fj1Ep2OIgsuoFKEBkABgbWpTvJjIsBfkhovIECqzxYY8JW3ZgPgXNGupzzMkKszVF9p5gF_W00)
+![The Public Prosecution Service](http://www.plantuml.com/plantuml/svg/9Sun4i8m34JHdbF00HprL2beEOInHQB1aJnQcLoVPAX-yRRO6P4znjOkDz7IHkNXxRf6TDo9FE_J8h6Erm1xCGtMc8fj1Ep2OIgsuoFKEBkABgbWpTvJjIsBfkhovIECqzxYY8JW3ZgPgXNGupzzMkKszVF9p5gF_W00)
 
 This model was created by using [PlantUML](https://plantuml.com/) and methods described [here](https://gist.github.com/noamtamim/f11982b28602bd7e604c233fbe9d910f) and [here](https://stackoverflow.com/questions/32203610/how-to-integrate-uml-diagrams-into-gitlab-or-github/32771815#32771815). If you're using Visual Studio Code it would be useful to install [this](https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml) extension :-).
