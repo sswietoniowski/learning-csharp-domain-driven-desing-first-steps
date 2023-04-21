@@ -4,18 +4,18 @@ using JusticeApp.Investigation;
 
 namespace JusticeApp.Tests.Investigation;
 
-public class APreChargeDecisionFixture
+public class APreChargeDecisionCaseFixture
 {
     public Suspect Suspect { get; }
-    public PreChargeDecision PreChargeDecision { get; }
+    public PreChargeDecisionCase PreChargeDecisionCase { get; }
     public OffenceAdvice OffenceAdvice { get; }
 
-    public APreChargeDecisionFixture()
+    public APreChargeDecisionCaseFixture()
     {
         PNCId pncId = new PNCId("ANOTHER_PNC_ID");
         Suspect = new Suspect(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
         var suspects = new HashSet<Suspect>();
-        PreChargeDecision = new PreChargeDecision(pncId, suspects);
+        PreChargeDecisionCase = new PreChargeDecisionCase(pncId, suspects);
         OffenceAdvice = new OffenceAdvice();
     }
 }

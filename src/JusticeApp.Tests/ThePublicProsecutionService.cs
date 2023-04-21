@@ -21,7 +21,7 @@ public class ThePublicProsecutionService : IClassFixture<ThePublicProsecutionSer
         Suspect suspect = new(CriminalOffence.CUTTING_AWAY_BUOYS_ETC);
         PoliceInvestigation policeInvestigation = new(pncId, suspect);
 
-        PreChargeDecision pcd = _thePps.ReceiveRequestForPreChargeDecision(policeInvestigation);
+        PreChargeDecisionCase pcd = _thePps.ReceiveRequestForPreChargeDecision(policeInvestigation);
 
         Assert.Equal(pncId, pcd.PNCId);
         Assert.Equal(policeInvestigation.Suspects, pcd.Suspects);

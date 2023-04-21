@@ -4,12 +4,12 @@ using System.Linq;
 
 namespace JusticeApp.Investigation;
 
-public class PreChargeDecision
+public class PreChargeDecisionCase
 {
     public PNCId PNCId { get; }
     private readonly Dictionary<Suspect, OffenceAdvice> _alternativeOffenceAdvice = new();
 
-    public PreChargeDecision(PNCId pncId, ISet<Suspect> suspects)
+    public PreChargeDecisionCase(PNCId pncId, ISet<Suspect> suspects)
     {
         PNCId = pncId;
         foreach (var suspect in suspects)

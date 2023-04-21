@@ -1,5 +1,4 @@
 using HarmelLaw.JusticeApp;
-using JusticeApp;
 using System.Collections.Generic;
 
 namespace JusticeApp.Preparation;
