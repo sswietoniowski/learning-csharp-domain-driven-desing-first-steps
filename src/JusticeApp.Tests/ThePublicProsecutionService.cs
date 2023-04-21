@@ -3,18 +3,13 @@ using Xunit;
 
 namespace JusticeApp.Tests;
 
-public class ThePublicProsecutionService
+public class ThePublicProsecutionService : IClassFixture<ThePublicProsecutionServiceFixture>
 {
-    private PublicProsecutionService _thePps;
+    private readonly PublicProsecutionService _thePps;
 
-    public ThePublicProsecutionService()
+    public ThePublicProsecutionService(ThePublicProsecutionServiceFixture fixture)
     {
-        Setup();
-    }
-
-    public void Setup()
-    {
-        _thePps = new PublicProsecutionService();
+        _thePps = fixture.PublicProsecutionService;
     }
 
     [Fact]
