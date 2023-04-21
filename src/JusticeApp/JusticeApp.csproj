@@ -4,4 +4,8 @@
     <TargetFramework>NET7.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Preparation\" />
+  </ItemGroup>
+
 </Project>
