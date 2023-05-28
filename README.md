@@ -1,4 +1,4 @@
-# First Steps in Domain-Driven Design - C# Solution
+# Learning C# - Domain Driven Design - First Steps
 
 ![Build](https://github.com/First-Steps-in-DDD-Community/first-steps-in-ddd-solutions-dotnet/workflows/Build/badge.svg)
 
